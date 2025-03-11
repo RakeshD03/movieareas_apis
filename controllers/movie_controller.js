@@ -3,7 +3,11 @@
 }  
 
 const movieCreate = (req,res)=>{
-    res.send('hello')
+ // id ,tittle ,des
+
+ console.log(req.body);
+ res.send(req.body)
+
 }
 
 const movieUpdate = (req,res)=>{
