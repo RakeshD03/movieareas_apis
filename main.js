@@ -1,14 +1,15 @@
 const express = require('express')
 const movieRoutes = require('./routes/movies_routes.js');
+const connectDB = require('./lib/db.js');
 
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.json({msg: 'Hello World!'})
-})
 
+// Connect DB
+connectDB();
 
+// handling routes 
 app.use('/', movieRoutes);
 
 
