@@ -1,4 +1,6 @@
 const express = require('express')
+const movieRoutes = require('./routes/movies_routes.js');
+
 const app = express()
 const port = 3000
 
@@ -7,26 +9,8 @@ app.get('/', (req, res) => {
 })
 
 
-//CRUD functions for movies 
+app.use('/', movieRoutes);
 
-// for Reading the movies 
-app.get('/movies', (req, res) => {
-  })
-
-// for Creating movies
-app.post('/movies',(req,res)=>{
-
-})
-
-// for updating movies 
-app.put('/movies/:id',(req,res)=>{
-
-})
-
-// for deleting movies 
-app.delete('/movies/:id',(req,res)=>{
-
-})
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
